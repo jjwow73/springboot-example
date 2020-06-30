@@ -45,5 +45,15 @@ public class PostsService {
                 .map(PostsListResponseDto::new)
                 .collect(Collectors.toList());
     }
+
+    @Transactional
+    public void deleteById(Long id) {
+        Posts post = postsRepository.findById(id).orElseThrow(
+                ()-> new IllegalArgumentException("해당 게시글이 없습니다. id="+id)
+        );
+        postsRepository.delete(post);
+        // entity를 parameter로 삭제할 수도 있고, deleteById 메소드를 이용해 id로 삭제할 수도 있음.
+        // 존재하는 Posts인지 확인 후 엔티티 조회 후 그대로 삭제.
+    }
     // 트랜잭션 범위는 유지하되 조회기능만 남겨 조회 속도 개선
 }
