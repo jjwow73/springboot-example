@@ -9,6 +9,11 @@ public class IndexController {
     public String index() {
         return "index";
     }
+
+    @GetMapping("/posts/save")
+    public String postsSave() {
+        return "posts-save";
+    }
 }
 /*
  * View Resolver는 URL요청의 결과를 전달할 타입과 값을 지정하는 관리자격.
