@@ -3,8 +3,8 @@ package com.jongwow.book.springboot.config.auth;
 
 import com.jongwow.book.springboot.domain.user.User;
 import com.jongwow.book.springboot.domain.user.UserRepository;
-import com.jongwow.book.springboot.web.dto.OAuthAttributes;
-import com.jongwow.book.springboot.web.dto.SessionUser;
+import com.jongwow.book.springboot.config.auth.dto.OAuthAttributes;
+import com.jongwow.book.springboot.config.auth.dto.SessionUser;
 import lombok.RequiredArgsConstructor;
 import org.springframework.security.core.authority.SimpleGrantedAuthority;
 import org.springframework.security.oauth2.client.userinfo.DefaultOAuth2UserService;

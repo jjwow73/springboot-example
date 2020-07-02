@@ -1,4 +1,4 @@
-package com.jongwow.book.springboot.web.dto;
+package com.jongwow.book.springboot.config.auth.dto;
 
 import com.jongwow.book.springboot.domain.user.User;
 import lombok.Getter;
